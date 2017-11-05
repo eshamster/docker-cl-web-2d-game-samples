@@ -71,9 +71,9 @@ nginx_file="${base_dir}/nginx/default.conf"
 cat <<EOI | sed '/locations/r /dev/stdin' "${nginx_file}.in" >| "${nginx_file}"
 $(for sample in ${sample_name_list[@]}; do
     cat<<EOLOC
-    location /${sample}/ {
-      proxy_pass http://${sample}:16896/;
-    }
+  location /${sample}/ {
+    proxy_pass http://${sample}:16896/;
+  }
 EOLOC
   done)
 EOI
