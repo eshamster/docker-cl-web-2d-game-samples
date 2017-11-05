@@ -1,0 +1,5 @@
+*.swp
+docker-compose.yml
+nginx/index.html
+nginx/default.conf
+_work/
