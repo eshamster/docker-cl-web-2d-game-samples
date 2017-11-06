@@ -2,11 +2,5 @@ server {
   listen 80;
   server_name localhost;
 
-  location /images/ {
-    if ($http_referer ~* /(sample[^/]*)/$) {
-      proxy_pass http://$1:16896;
-    }
-  }
-
   # --- locations --- #
 }
